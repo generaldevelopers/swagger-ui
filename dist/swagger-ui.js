@@ -1378,7 +1378,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
       }
       url = this.options.url;
       if (url.indexOf("http") !== 0) {
-        url = this.buildUrl(window.location.href.toString(), url);
+        //to return the url parameter directly
+        /*url = this.buildUrl(window.location.href.toString(), url);*/
+        return url;
       }
       this.options.url = url;
       this.headerView.update(url);
